@@ -5,8 +5,8 @@ $(document).ready(function(){
   $('div').click(function(){
       })
 });
-document.getElementById("currentDay")
-
+var today = dayjs();
+$('#currentDay').text(today.format('MMM D, YYYY HH:mm:ss'));
 
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
