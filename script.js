@@ -20,6 +20,8 @@
     }
      // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. 
+
+  //Not working
   function hourlyColor() {
     $('.time-block').each(function() {
       var blockHour = parseInt(this.id);
