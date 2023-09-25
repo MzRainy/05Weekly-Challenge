@@ -30,6 +30,10 @@
       $(this).toggleClass('future', blockHour > currentHour);
     });
   }
+  hourlyColor();
+  textEntry();                
+
+
   //This is my code to refresh the color based on the current hour.
     function refreshColor() {
       $('.time-block').each(function() {
@@ -43,6 +47,9 @@
         }
       });
     }
+   refreshColor();
+    textEntry();                
+    
    // TODO: Add code to get any user input that was saved in localStorage and set
    // the values of the corresponding textarea elements
     $('.time-block').each(function() {
@@ -61,13 +68,11 @@
       timeElement.text(currentTime);
     }
    
-    hourlyColor();
-    textEntry();                
-    refreshColor();
+  
     
-    setInterval(updateTime, 1000);
+    
     // TODO: Add code to display the current date in the header of the page
-    var today = dayjs();
-    $('#currentDay').text(today.format('MMM D, YYYY', 'HH:mm:ss'));
+    var now = dayjs();
+    $('#currentDay').text(now.format('MMM D, YYYY', 'HH:mm:ss'));
     
   });
